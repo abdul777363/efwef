@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <script>
+
+        // Redirect to the load page after 3 seconds
+
+        setTimeout(function() {
+
+            window.location.href = '/signin';
+
+        }, 3000);
+
+    </script>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+        }
+
+        .loader {
+            text-align: center;
+        }
+
+        .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.2); /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite; /* Spin animation */
+            margin: 0 auto; /* Center the spinner */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader p {
+            margin-top: 10px;
+            font-size: 18px;
+            animation: fadeIn 1s ease-in-out infinite alternate; /* Fade in animation */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Loading, please wait...</p>
+    </div>
+
+   
+</body>
+</html>
